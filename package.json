@@ -1,0 +1,22 @@
+{
+  "name": "dashbi-data-provider-jenkins-build",
+  "version": "0.1.0",
+  "description": "Dashbi data provider that fetches last build for given Jenkins job",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dashbi",
+    "dashbi-data-provider",
+    "jenkins",
+    "jenkins-build",
+    "jenkins-job"
+  ],
+  "author": "Marek Sierociński <mareksierocinski@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "dashbi-worker": "^0.1.0"
+  }
+}
