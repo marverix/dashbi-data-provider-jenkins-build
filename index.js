@@ -15,16 +15,15 @@ function stripWrappingSlashes (str) {
  * Get last build
  */
 function getLastBuild () {
-  let that = this;
-  axios.get(`${stripWrappingSlashes(that.config.jenkinsUrl)}/${stripWrappingSlashes(that.config.jobPath)}/lastBuild/api/json`, {
+  axios.get(`${stripWrappingSlashes(this.config.jenkinsUrl)}/${stripWrappingSlashes(this.config.jobPath)}/lastBuild/api/json`, {
     timeout: 2 * Date.SECOND
   })
-  .then(function (res) {
-    that.storeState('id', res.data.id);
-    that.storeState('result', res.data.result);
-    that.storeState('duration', res.data.duration);
+  .then( (res) => {
+    this.storeState('id', res.data.id);
+    this.storeState('result', res.data.result);
+    this.storeState('duration', res.data.duration);
   })
-  .catch(function (err) {
+  .catch( (err) => {
     // Support error?
   });
 }
